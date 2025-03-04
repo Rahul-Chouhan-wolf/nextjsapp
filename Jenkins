@@ -1,26 +1,19 @@
 pipeline {
     agent {
-        docker {
-            image 'node:20'
-            label 'my-defined-label'
-            args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket if needed
-        }
+        docker { image 'node:22.14.0-alpine3.21' }
     }
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t nextjsapp -f build/Dockerfile .' // Build the Docker image
+                sh 'node -v'
+                sh 'npm -v'
+                sh 'npm install'
             }
         }
-        stage('Run Tests') {
+        stage('Test') {
             steps {
-                sh 'docker run --rm nextjsapp npm run test:coverage' // Run tests inside the container
+                sh 'npm run test'
             }
-        }
-    }
-    post {
-        always {
-            cleanWs()
         }
     }
 }
