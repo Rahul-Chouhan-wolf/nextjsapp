@@ -1,12 +1,12 @@
 // app/page.js
-'use client' // Mark as client component
-import NameGenerator from './components/NameGenerator'
+'use client'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
     <div className='flex justify-center items-center h-screen flex-col space-y-4'>
-      <h1 className='text-center'>Random Name Generator</h1>
-      <NameGenerator />
+      <Button onClick={() => window.location.href = '/components/namegenerator'}>Generate Random Names</Button>
+      <Button onClick={() => window.location.href = '/components/clock'}>Clock</Button>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 // components/NameGenerator.js
 // 'use client' // Mark as client component
-
-import { Button } from '@/components/ui/button';
+'use client'
+import { Button } from '@/components/ui/button'
 import React, { useState } from 'react'
 
 const NameGenerator = () => {
@@ -20,10 +20,10 @@ const NameGenerator = () => {
       '桂香 (Gui Xiang)', '秀香 (Xiu Xiang)', '桂秀 (Gui Xiu)', '秀秀 (Xiu Xiu)', '桂秀 (Gui Xiu)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)',
       '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)',
       '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)', '桂丽 (Gui Li)', '秀丽 (Xiu Li)',
-    ];
+    ]
     const randomName = names[Math.floor(Math.random() * names.length)]
     setGeneratedName(randomName)
-    };
+    }
 
     return (
     <div>
