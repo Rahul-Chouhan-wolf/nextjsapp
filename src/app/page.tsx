@@ -7,6 +7,8 @@ export default function Home() {
     <div className='flex justify-center items-center h-screen flex-col space-y-4'>
       <Button onClick={() => window.location.href = '/components/namegenerator'}>Generate Random Names</Button>
       <Button onClick={() => window.location.href = '/components/clock'}>Clock</Button>
+      <Button onClick={() => window.location.href = '/components/user/login'}>Premium Features</Button>
+      <Button onClick={() => window.location.href = '/components/portfolio'}>Portfolio</Button>
     </div>
   )
 }
